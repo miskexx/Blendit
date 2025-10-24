@@ -1,0 +1,28 @@
+header a{
+  font-family: 'MujFont', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+header a.active{
+  color: var(--orange);
+}
+
+header a:hover{
+  color: var(--orange);
+}
+
+.header {
+    width: 90%;
+    padding: 10px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a{
+    justify-content: space-between;
+    padding: 15px;
+}

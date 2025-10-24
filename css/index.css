@@ -1,0 +1,30 @@
+h1{
+    font-family: 'MujFont';
+      src: url('../fonts/Miskiefont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+.btn-hp{
+  font-family: 'MujFont';
+      src: url('../fonts/Miskiefont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+
+  background-color: var(--yellow);
+
+}
+a.button {
+    padding: 5px 6px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+
+    font-family: 'MujFont';
+      src: url('../fonts/Miskiefont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+
+  color: var(--primary);
+  background-color: var(--yellow);
+}

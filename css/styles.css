@@ -1,0 +1,28 @@
+:root {
+  --bg: #F5EFE6; /* backgroud color */
+  --orange: #FF923E; /* buttons, heading */
+  --primary: #091434; /* text */
+  --blue: #9EB6D0; /* modra */
+  --yellow: #EFDA8B; /* zluta */
+}
+
+@font-face {
+  font-family: 'MujFont';
+      src: url('../fonts/Miskiefont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+p{
+  font-family: 'MujFont', sans-serif;
+}
+
+body{
+    background-color: var(--bg);
+    
+}
+
+main {
+width: 95%;
+margin: auto;
+}
