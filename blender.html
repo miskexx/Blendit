@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/blender.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <script src="./scripts/blender.js" type="module"></script>
+    <title>BlendIt</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+            }
+        }
+  </script>
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="./index.html" class="logo"><img src="./images/header-home.png" width="150px" alt="logo"></a>
+        
+        <nav class="navbar">
+            <a href="./index.html">ÚVOD</a>
+            <a class="active" href="./blender.html">BLENDER</a>
+            <a href="./lekce.html">LEKCE</a>
+            <a href="./o-projektu.html">O PROJEKTU</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="left">
+                <h1>MODELOVACÍ PROGRAM BLENDER</h1>
+                <p>Blender je výkonný, a přitom zcela <b>zdarma dostupný program</b>, ve kterém můžeš snadno tvořit vlastní 3D modely,
+                    animace nebo i celé digitální světy. Je oblíbený mezi začátečníky i profesionály a je skvělý pro herní tvorbu, filmovou tvorbu nebo digitální umění.
+                    <br><br>
+                    <b>Výhodou Blenderu</b> je, že má obrovskou a aktivní komunitu, a spoustu návodů. 
+                    Na tomto webu tě krok za krokem provedeme základy: naučíme tě ovládat 3D prostor, přidávat a přesouvat objekty, dávat jim barvy a hlavně — modelovat!
+                    Ukážeme ti, jak na závěr celou svou scénu vyfotit (vyrenderovat). Díky tomu můžeš už brzy své nápady proměnit v krásné 3D modely.
+                    <br><br>
+                    Odkaz na oficiální stránku Blenderu: <a href="https://www.blender.org/">blender.org</a>
+                </p>
+            </div>
+            <div class="right" id="model-container">
+            </div>
+        </section>
+
+
+    </main>
+    
+
+    <footer>
+        <h6>© Michaela Fenclová</h6>
+    </footer>
+</body>
+</html>

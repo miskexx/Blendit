@@ -4,6 +4,7 @@
   --primary: #091434; /* text */
   --blue: #9EB6D0; /* modra */
   --yellow: #EFDA8B; /* zluta */
+  --grey: #535B73; /* seda */
 }
 
 @font-face {
@@ -13,16 +14,61 @@
       font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    row-gap: 50px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'MujFont';
+      src: url('../fonts/Miskiefont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      color: var(--primary);
+}
+
+h1{
+  font-size: 64px;
+  color: var(--primary);
+}
+
+
+h6{
+  font-size: 16px;
+  color: var(--primary);
+}
+
 p{
-  font-family: 'MujFont', sans-serif;
+  font-size: 18px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  color: var(--primary);
 }
 
 body{
     background-color: var(--bg);
-    
 }
 
 main {
-width: 95%;
+width: 90%;
 margin: auto;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p{
+  font-size: 20px;
+  color: var(--grey);
+}
+
+footer{
+  color: var(--grey);
+  margin-bottom: 1vw;
 }

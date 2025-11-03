@@ -7,7 +7,17 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/nav.css">
+    <script src="./scripts/index.js" type="module"></script>
     <title>BlendIt</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+            }
+        }
+  </script>
 
 </head>
 
@@ -27,18 +37,23 @@
             <section class="hero">
                 <div class="left">
                     <h1>OBJEV KOUZLO 3D MODELOVÁNÍ V BLENDERU</h1>
+                    <p>Pojďte se společně vydat do světa 3D modelování s kurzem navrženým pro úplné začátečníky. Čeká vás seznámení s prostředím programu Blender, postupné zvládnutí základních nástrojů a tvorba prvních vlastních modelů.</p>
                     <div class="buttons">
-                        <a href="https://google.com" class="button">CO TO JE BLENDER?</a>
-                        <a href="https://google.com" class="button">ZAČÍT</a>
+                        <a href="./blender.html" class="button">CO TO JE BLENDER?</a>
+                        <a href="./lekce.html" class="button">ZAČÍT</a>
                     </div>
                 </div>
                 <div class="right" id="model-container">
-                    asset
                 </div>
             </section>
             
 
         </main>
+        
     
+
+    <footer>
+        <h6>© Michaela Fenclová</h6>
+    </footer>
 </body>
 </html>

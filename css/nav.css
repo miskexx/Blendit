@@ -14,8 +14,8 @@ header a:hover{
 }
 
 .header {
-    width: 90%;
-    padding: 10px 5vw;
+    width: 100%;
+    padding: 10px 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,4 +25,5 @@ header a:hover{
 .navbar a{
     justify-content: space-between;
     padding: 15px;
+    color: var(--primary);
 }

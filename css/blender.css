@@ -1,0 +1,30 @@
+a{
+    color: var(--orange);
+}
+
+.hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 85vh;
+
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+
+  padding: 20px;
+  margin: 20px;
+  
+  width: 800px;
+  height: 400px;
+}
+
+.right{
+  width: 500px;
+  height: 400px;
+}
