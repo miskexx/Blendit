@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/lekce3.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <script src="./scripts/lekce3.js" type="module"></script>
+    <script src="./scripts/lampa.js" type="module"></script>
+    <title>BlendIt</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+            }
+        }
+  </script>
+
+</head>
+
+<body>
+       <header class="header">
+            <a href="./index.html" class="logo"><img src="./images/header-home.png" width="150px" alt="logo"></a>
+            <ul>
+                <li><a href="./index.html">ÚVOD</a></li>
+                <li><a href="./blender.html">BLENDER</a></li>
+                <li>
+                    <a href="#">LEKCE ⤵︎</a>
+                    <ul class="dropdown">
+                        <li><a href="lekce1.html">LEKCE 1 - 3D PROSTŘEDÍ</a></li>
+                        <li><a href="lekce2.html">LEKCE 2 - ZÁKLADNÍ TRANSFORMACE</a></li>
+                        <li><a class="active" href="lekce3.html">LEKCE 3 - NOVÉ OBJEKTY</a></li>
+                        <li><a href="lekce4.html">LEKCE 4 - ZÁKLADNÍ MODELOVÁNÍ</a></li>
+                        <li><a href="lekce5.html">LEKCE 5 - BARVY PRO OBJEKTY</a></li>
+                        <li><a href="lekce6.html">LEKCE 6 - KAMERA, SVĚTLO, RENDER</a></li>
+                    </ul>
+                </li>
+                <li><a href="./o-projektu.html">O PROJEKTU</a></li>
+            </ul>
+        </header>
+
+        <section class="hero">
+            <div class="nadpis">
+                <h2>3. LEKCE - NOVÉ OBJEKTY</h2>
+            </div>
+            <div class="popis">
+                <div id="objekty" class="objekty">
+
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <section id="sekce" class="uvod">
+                <div class="nadpis-sekce">
+                    <h2> - ÚVOD</h2>
+                </div>
+                <div class="kontent">
+                    <p>V Blenderu je klíčové umět přidávat a spravovat nové objekty, protože vám to umožní tvořit komplexní scény přesahující pouhou startovní kostku. Práce s novými objekty je jeden z dalších důležitých kroků v každém projektu.</p>
+                </div>
+           </section>  
+
+           <section id="sekce" class="pridat">
+                <div class="nadpis-sekce">
+                    <h2> - JAK PŘIDAT NOVÝ OBJEKT A ZÁKLADNÍ TVARY (MESH)</h2>
+                </div>
+                <div class="kontent">
+                    <p>Nový objekt do scény přidáme pomocí klávesové zkratky <kbd>Shift</kbd> + <kbd>A</kbd>.
+                        Tato zkratka otevře speciální menu <b>Add (Přidat)</b>, ve kterém naleznete různé kategorie, jako jsou Světla, Kamery, Křivky a hlavně <b>Mesh (Síť).</b></p>
+                    <div class="obraz1">
+                      <img src="./img/add-menu.png" alt="výchozí okno Blender" width="60%">  
+                      <p id="popisek-img">Add menu</p>
+                    </div>
+                </div>
+
+
+                <div class="mesh">
+                    <div class="nadpis-sekce">
+                        <h2> - KATEGORIE MESH</h2>
+                    </div>
+                    <div class="kontent-mesh">
+                        <div class="kontent" id="kontent-levo">
+                            <p>Kategorie Mesh obsahuje všechny <b>základní geometrické tvary</b>,
+                                které budeme potřebovat při každém modelování. Pro začátek se zaměřte na tyto nejpoužívanější:</p>
+                            <ul>
+                                <li><b>• Cube (Kostka):</b> Nejuniverzálnější tvar, který se ve scéně nachází i po spuštění Blenderu.</li>
+                                <li><b>• Plane (Plocha):</b> Dvourozměrný tvar, ideální pro podlahy a pozadí.</li>
+                                <li><b>• UV Sphere (Koule):</b> Kulatý objekt, používaný například na oči, hlavy nebo planety.</li>
+                                <li><b>• Cylinder (Válec):</b> Perfektní pro nohy, sloupy nebo kola.</li>
+                                <li><b>• Cone (Kužel):</b> Využijete ho například pro stínidla lamp nebo střechy.</li>
+                                <li><b>• Torus (Prstenec):</b> Tvar koblihy, skvělý pro gumičky nebo pneumatiky.</li>
+                            </ul>  
+                            <p><br>Kromě těchto tvarů menu obsahuje i sekce pro křivky (Curve) a další pokročilé objekty, které pro základní práci zatím nepotřebujete.</p>
+                        </div>
+                   
+                        <div class="kontent-pravo">
+                            <img src="./img/mesh-menu.png" alt="Mesh menu" id="mesh-menu">
+                            <p id="popisek-img">Mesh menu</p>
+                        </div>
+                    </div>
+                </div>
+           </section>  
+
+           <section id="sekce" class="prakticke-cviceni">
+            <div class="nadpis-sekce">
+                <h2> - PRAKTICKÉ CVIČENÍ: MODELOVÁNÍ LAMPY</h2>
+            </div>
+            <div id="kontent-cviceni" class="kontent">
+                <div class="popis-cviceni">
+                    <p>Cílem tohoto cvičení je vytvořit jednoduchou lampu (podobnou jak můžeš vidět napravo). 
+                        Tato úloha procvičí všechny dovednosti z této i předchozích lekcí.</p><br>
+                    <p><b>POSTUP:</b></p>
+                    <ul>
+                        <li><b>• Krok 1 - Tělo Lampy: </b>Přidej do scény nový <b>Cylinder</b> (<kbd>Shift + A</kbd> → Mesh → Cylinder). Pomocí kláves <kbd>S + X</kbd>, <kbd>Y</kbd> nebo <kbd>Z</kbd> uprav jeho velikost, aby tvořil tenkou nohu lampy.</li>
+                        <li><b>• Krok 2 - Podstavec: </b>Přidej další <b>Cylinder</b> a uprav jeho velikost, aby fungoval jako podstavec. Poté ho přesuň pomocí kláves <kbd>G + X</kbd>, <kbd>Y</kbd> nebo <kbd>Z</kbd>na spodek lampy.</li>
+                        <li><b>• Krok 3 - Žarovka: </b>Přidej <b>UV Sphere (<kbd>Shift + A</kbd> → Mesh → UV Sphere)</b>. Uprav její velikost a umísti ji na vrchol nohy lampy, aby fungovala jako žárovka.</li>
+                        <li><b>• Krok 4 - Stínidlo: </b>Přidej <b>Cone (kužel)</b>. Uprav jeho velikost a přesuň jej na vrchol lampy.</li>
+                    </ul><br>
+                    <p>Pokud ti po těchto čtyřech krocích vznikla lampa, dobrá práce!</p>
+                </div>
+                <div id="lampa" class="lampa">
+
+                </div>
+
+            </div>
+           </section>
+
+            <section id="sekce" class="shrnuti">
+                <div class="nadpis-sekce">
+                    <h2> - SHRNUTÍ LEKCE</h2>
+                </div>
+                <div class="kontent-shrnuti">
+                    <ul>
+                        <li>• Nové objekty přidáš pomocí kláves <kbd>Shift + A</kbd>.</li>
+                        <li>• Nejčastěji se používají základní <b>Mesh tvary</b> (kostka, koule, válec, kužel…).</li>
+                    </ul>
+                    <p>Tyto zkratky se v Blenderu používají neustále. Pokud si je zvládneš zapamatovat, jsi na dobré cestě k úspěchu.</p>
+                </div>
+           </section>
+
+
+
+        </main>
+        
+    
+
+    <footer>
+        <h6>© Michaela Fenclová</h6>
+    </footer>
+</body>
+</html>

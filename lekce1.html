@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/lekce1.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <script src="./scripts/lekce1.js" type="module"></script>
+    <title>BlendIt</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+            }
+        }
+  </script>
+
+</head>
+
+<body>
+       <header class="header">
+            <a href="./index.html" class="logo"><img src="./images/header-home.png" width="150px" alt="logo"></a>
+            <ul>
+                <li><a href="./index.html">ÚVOD</a></li>
+                <li><a href="./blender.html">BLENDER</a></li>
+                <li>
+                    <a href="#">LEKCE ⤵︎</a>
+                    <ul class="dropdown">
+                        <li><a class="active" href="lekce1.html">LEKCE 1 - 3D PROSTŘEDÍ</a></li>
+                        <li><a href="lekce2.html">LEKCE 2 - ZÁKLADNÍ TRANSFORMACE</a></li>
+                        <li><a href="lekce3.html">LEKCE 3 - NOVÉ OBJEKTY</a></li>
+                        <li><a href="lekce4.html">LEKCE 4 - ZÁKLADNÍ MODELOVÁNÍ</a></li>
+                        <li><a href="lekce5.html">LEKCE 5 - BARVY PRO OBJEKTY</a></li>
+                        <li><a href="lekce6.html">LEKCE 6 - KAMERA, SVĚTLO, RENDER</a></li>
+                    </ul>
+                </li>
+                <li><a href="./o-projektu.html">O PROJEKTU</a></li>
+            </ul>
+        </header>
+
+        <section class="hero">
+                <div class="nadpis">
+                    <h2>1. LEKCE - 3D PROSTŘEDÍ</h2>
+                </div>
+                <div class="popis">
+                    <div class="left">
+                        <h1>STARTOVNÍ</h1>
+                    </div>
+                    <div id="kostka" class="kostka">
+
+                    </div>
+                    <div class="right">
+                        <h1>POZICE</h1>
+                    </div>
+                </div>
+        </section>
+
+        <main>
+           <section id="sekce" class="uvod">
+            <div class="nadpis-sekce">
+                <h2> - ÚVOD</h2>
+            </div>
+            <div class="kontent">
+                <p>Když poprvé otevřeme Blender, přivítá nás jednoduchá scéna, která by 
+                    měla vypadat podobně jako na obrázku. Tato scéna obsahuje tři základní prvky: kameru, světlo a startovní kostku 
+                    – tvůj první stavební kámen v 3D prostoru.</p>
+                    <div class="obraz1">
+                      <img src="./img/blender-screen.png" alt="výchozí okno Blender" width="60%">  
+                      <p id="popisek-img">Výchozí okno blenderu</p>
+                    </div>
+                    
+            </div>
+           </section>     
+
+           <section id="sekce" class="3d-prostredi">
+            <div class="nadpis-sekce">
+                <h2> - 3D PROSTŘEDÍ</h2>
+            </div>
+            <div class="kontent">
+                <p>Blender je program určený pro práci v trojrozměrném prostoru.
+                    Pro správnou orientaci je nutné znát jeho souřadnicový systém, kde každý bod ve scéně je definován třemi osami:</p>
+
+                <ul>
+                    <li><b><span class="red">• Osa X (Červená)</span></b>  - Reprezentuje pohyb do stran (doprava a doleva).</li>
+                    <li><b><span class="green">• Osa Y (Zelená)</span></b>  - Určuje hloubku a vzdálenost (dopředu a dozadu).</li>
+                    <li><b><span class="blue">• Osa Z (Modrá)</span></b> - Definuje vertikální polohu, tedy výšku (nahoru a dolů).</li>
+                </ul>
+            </div>
+           </section>
+
+           <section id="sekce" class="pohyb">
+                <div class="nadpis-sekce">
+                    <h2>- POHYB V PROSTŘEDÍ</h2>
+                </div>
+                <div class="kontent">
+                    <p>Než se pustíme do úprav objektů, je nutné si osvojit základní ovládání pohledu. Tyto tři jednoduché pohyby vám umožní komfortní navigaci ve scéně:</p>
+                    <ul>
+                        <li><b><span class="orange">• Otáčení pohledu (Orbit)</span></b> - Stiskni a táhni <kbd>MMB</kbd>.</li>
+                        <li><b><span class="orange">• Přiblížení a oddálení (Zoom)</span></b> -  Pohybuj kolečkem myši dopředu a dozadu.</li>
+                        <li><b><span class="orange">• Posun pohledu do stran (Pan)</span></b> - <kbd>SHIFT</kbd> + <kbd>MMB</kbd> a táhni.</li>
+                    </ul>
+                </div>
+                
+           </section>
+
+           <section id="sekce" class="shrnuti">
+                <div class="nadpis-sekce">
+                    <h2> - SHRNUTÍ LEKCE</h2>
+                </div>
+                <div class="kontent-shrnuti">
+                    <ul>
+                        <li>• Blender pracuje v 3D prostoru definovaném osami <b><span class="red">X</span></b> , <b><span class="green">Y</span></b> a <b><span class="blue">Z</span></b>.</li>
+                        <li>• Pro navigaci nezapomeň na <b><kbd>MMB</kbd></b> (otáčení), <b><kbd>kolečko myši</kbd></b> (zoom) a <b><kbd>Shift + MMB</kbd></b> (posun).</li>
+                    </ul>
+                </div>
+           </section>
+
+        </main>
+        
+    
+
+    <footer>
+        <h6>© Michaela Fenclová</h6>
+    </footer>
+</body>
+</html>

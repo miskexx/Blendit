@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/lekce4.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <script src="./scripts/lekce4.js" type="module"></script>
+    <script src="./scripts/mrakodrap.js" type="module"></script>
+    <title>BlendIt</title>
+
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+            }
+        }
+  </script>
+
+</head>
+
+<body>
+       <header class="header">
+            <a href="./index.html" class="logo"><img src="./images/header-home.png" width="150px" alt="logo"></a>
+            <ul>
+                <li><a href="./index.html">ÚVOD</a></li>
+                <li><a href="./blender.html">BLENDER</a></li>
+                <li>
+                    <a href="#">LEKCE ⤵︎</a>
+                    <ul class="dropdown">
+                        <li><a href="lekce1.html">LEKCE 1 - 3D PROSTŘEDÍ</a></li>
+                        <li><a href="lekce2.html">LEKCE 2 - ZÁKLADNÍ TRANSFORMACE</a></li>
+                        <li><a href="lekce3.html">LEKCE 3 - NOVÉ OBJEKTY</a></li>
+                        <li><a class="active" href="lekce4.html">LEKCE 4 - ZÁKLADNÍ MODELOVÁNÍ</a></li>
+                        <li><a href="lekce5.html">LEKCE 5 - BARVY PRO OBJEKTY</a></li>
+                        <li><a href="lekce6.html">LEKCE 6 - KAMERA, SVĚTLO, RENDER</a></li>
+                    </ul>
+                </li>
+                <li><a href="./o-projektu.html">O PROJEKTU</a></li>
+            </ul>
+        </header>
+
+         <section class="hero">
+            <div class="nadpis">
+                <h2>4. LEKCE - ZÁKLADNÍ MODELOVÁNÍ</h2>
+            </div>
+            <div class="popis">
+                <div id="raketa">
+
+                </div> 
+            </div>
+        </section>
+
+        <main>
+
+            <section id="sekce" class="uvod">
+                <div class="nadpis-sekce">
+                    <h2> - ÚVOD</h2>
+                </div>
+                <div class="kontent-4uvod">
+                    <div class="kontent-levo">
+                        <p>
+                            Vítej v části, kde začíná ta pravá zábava - <b>modelování!</b>
+                            Dosud jsme jen posouvali celé objekty, ale v této lekci se přesuneme ke schopnosti <b>měnit jejich tvary</b>. 
+                            K tomu se používá režim <b>Edit Mode</b>, kde pracuješ s vnitřní geometrií objektu.
+                            <br><br>
+                            V levém horním rohu si vždy zkontroluj, v jakém modu se právě nacházíš. 
+                            Pro rychlý přechod mezi Edit Mode a Object Mode (který slouží pro manipulaci s celým objektem) 
+                            stiskni klávesu <kbd>Tab</kbd>.
+                        </p>
+                    </div>
+
+                    <div class="kontent-pravo">
+                        <img src="./img/rezim-prace.png" alt="přepínání režimů práce" id="rezim-prace" width="200px">
+                        <p id="popisek-img">Přepínání režimů práce</p>
+                    </div>
+                </div>
+
+           </section>
+
+           <section id="sekce" class="modes">
+                <div class="nadpis-sekce">
+                    <h2>  - ROZDÍL MEZI EDIT MODE A OBJECT MODE</h2>
+                </div>
+                <div class="kontent">
+                    <p>Režim <b>Object Mode</b> je výchozí stav, kdy pracujeme s <b>celým objektem</b> (např. posouváte, otáčíte nebo měníte velikost celé kostky).</p>
+                    <br>
+                    <p>Oproti tomu režim <b>Edit Mode</b> nám umožní pracovat s <b><span class="red">jednotlivými komponenty</span></b> geometrie objektu: </p>
+
+                    <ul>
+                        <li>• <b>Vertices (Vrcholy):</b> Jednotlivé body (rohy) objektu.</li>
+                        <li>• <b>Edges (Hrany):</b> Spojnice mezi dvěma vrcholy.</li>
+                        <li>• <b>Faces (Plochy):</b> Uzavřený povrch tvořený hranami.</li>
+                    </ul><br>
+                <div class="kontent-modes">
+                    <div class="popis-modes">
+                        <p>V Blenderu se tyto komponenty dají přepínat pomocí ikon hned vedle tlačítka "Edit Mode", které ukazují, zda vybíráte body, hrany nebo plochy.</p>
+                    </div>
+                    <div class="face-menu">
+                        <img src="./img/face-menu.png" alt="Výběr v rámci úprav" width="80%">
+                        <p id="popisek-img">Režim výběru</p>
+                    </div>    
+                </div>
+
+                </div>
+           </section>
+
+            <section id="sekce" class="extrude">
+                <div class="nadpis-sekce">
+                    <h2>  - EXTRUDE (E)</h2>
+                </div>
+                <div class="kontent">
+                    <p>
+                        <b>Extrude (E)</b> je jeden z nejpoužívanějších modelovacích nástrojů v Blenderu.  
+                        Umožňuje ti <b>vytáhnout plochu</b> z objektu a tím přidat <b>novou geometrii</b>.  
+                        Pomocí extrude můžeš snadno vytvářet složitější tvary z jednoduchých objektů.
+                    </p>
+                    <br>
+                    <ol>
+                        <li>Přepni se do <b>Edit Mode</b> (klávesa <kbd>Tab</kbd>).</li>
+                        <li>Vyber <b>plochu</b>, kterou chceš vytáhnout (klávesa <kbd>3</kbd> pro výběr ploch).</li>
+                        <li>Stiskni <kbd>E</kbd> a <b>pohybuj myší</b> nahoru nebo ven z objektu - tím vytvoříš novou část modelu.</li>
+                        <li>Potvrď pohyb <kbd>LMB</kbd></li>
+                    </ol>
+                </div>
+                    <div class="video">
+                        <video width="600" autoplay loop muted class="video-s-okrajem">
+                            <source src="./videos/extrude.mp4" type="video/mp4">
+                            <source src="./videos/extrude.mp4" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+           </section>
+
+            <section id="sekce" class="inset">
+                <div class="nadpis-sekce">
+                    <h2>- INSET (I)</h2>
+                </div>
+                <div class="kontent">
+                    <p>
+                        <b>Inset (I)</b> je jeden ze základních modelovacích nástrojů v Blenderu.  
+                        Umožňuje ti vytvořit menší plochu uvnitř vybrané plochy, což se hodí například při tvorbě rámů, oken nebo detailních okrajů objektu.
+                    </p>
+                    <br>
+                    <ol>
+                        <li>Přepni se do <b>Edit Mode</b> (klávesa <kbd>Tab</kbd>) a vyber plochu, se kterou chceš pracovat.</li>
+                        <li>Stiskni <kbd>I</kbd> a <b>táhni myší dovnitř nebo ven</b> - tím vytvoříš novou vnitřní plochu uvnitř té původní.</li>
+                        <li>Uvolni tlačítko myši, jakmile je plocha velikostně podle tvých představ.</li>
+                    </ol>
+                </div>
+                    <div class="video">
+                        <video width="600" autoplay loop muted class="video-s-okrajem">
+                            <source src="./videos/inset.mp4" type="video/mp4">
+                            <source src="./videos/inset.mp4" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+           </section>
+
+            <section id="sekce" class="sub">
+                <div class="nadpis-sekce">
+                    <h2>- SUBDIVIDE (I)</h2>
+                </div>
+                <div class="kontent">
+                    <p>Nástroj <b>Subdivide</b> jednoduše rozděluje plochy a hrany na menší kousky.
+                         Využívá se zejména pro přidání více detailů objektu a líp ho tím tvarovat.
+                          Čím více malých kousků, tím jemnější a plynulejší tvary můžeme vytvořit.</p><br>
+
+                    <ol>
+                        <li>Přepni se do <b>Edit Mode</b> (klávesa <kbd>Tab</kbd>).</li>
+                        <li>Vyber <b>plochu</b>, <b>hranu</b> nebo <b>celý objekt</b>, který chceš rozdělit.</li>
+                        <li>Klikni <kbd>RMB</kbd> a z kontextového menu zvol <b>Subdivide</b>.</li>
+                        <li>V levém dolním rohu (panel Subdivide) můžeš nastavit počet rozdělení v poli <b>Number of Cuts</b>.</li>
+                        <li>Podle potřeby úpravy potvrď nebo pokračuj v modelování.</li>
+                    </ol>
+                    <div class="video">
+                        <video width="600" autoplay loop muted class="video-s-okrajem">
+                            <source src="./videos/subdivide.mp4" type="video/mp4">
+                            <source src="./videos/subdivide.mp4" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+           </section>
+
+           <section id="sekce" class="mrakodrap-sekce">
+                <div class="nadpis-sekce">
+                    <h2>- PRAKTICKÉ CVIČENÍ - MRAKODRAP</h2>
+                </div>
+                <div class="kontent-mrakodrap">
+                    <div class="popis-ukolu">
+                        <p>
+                            Kombinace těchto základních nástrojů <b>otevírá dveře k novému levelu modelování</b>. 
+                            Nyní už začneme pracovat s vlastní představivostí! Pomocí těchto nástrojů dokážeme z jediné kostky <b>tvořit komplexní struktury</b>, 
+                            jako jsou právě budovy.
+                        </p> 
+                        <p>
+                            Tvým <b>úkolem</b> je <b>vytvoření budovy</b> (např. mrakodrapu - inspirace viz napravo) za použití nástrojů <b>Extrude, Inset a Subdivide</b> (demonstrovány výše).
+                        </p><br>
+                        <div class="tooltip"><b>Postup</b> (Pokud si nevíš rady)
+                            <span class="tooltiptext">
+                                1. Začni s <b>Kostkou</b> (Cube), která poslouží jako spodní patro budovy.<br>
+                                2. V <b>Edit modu</b> vyber horní plochu kostky a pomocí <kbd>I</kbd> vytvoř <b>menší plochu</b> uprostřed.<br>
+                                3. <b>Extruduj</b> <kbd>E</kbd> tuto menší plochu směrem nahoru, abys vytvořil/a zužující se budovu a 
+                                <b>opakuj dokud nebudeš spokolený</b> s počtem pater.<br>
+                                4. Vyber všechny <b>boční plochy</b> pater <kbd>SHIFT</kbd> + <kbd>LMB</kbd> a použij subdivide <kbd>RMB</kbd>.<br>
+                                5. Pracuj s <kbd>E</kbd> a <kbd>I</kbd> ve vytvořených <b>menších plochách</b> aby jsi docílil vytvoření oken.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mrakodrap" id="mrakodrap">
+                    </div>
+                </div>
+           </section>
+
+            <section id="sekce" class="shrnuti">
+                <div class="nadpis-sekce">
+                    <h2> - SHRNUTÍ LEKCE</h2>
+                </div>
+                <div class="kontent-shrnuti">
+                    <ul>
+                        <li>• Přepínáme mezi <b>Object Mode</b> (celý objekt) a <b>Edit Mode</b> (geometrie) klávesou <kbd>Tab</kbd>.</li>
+                        <li>• <b>Extrude</b> <kbd>E</kbd> vytváří novou geometrii vytažením plochy.</li>
+                        <li>• <b>Inset</b> <kbd>I</kbd> vytvoří menší plochu uvnitř plochy.</li>
+                        <li>• Tyto nástroje tvoří <b>základ složitého modelování</b>.</li>
+                    </ul>
+                </div>
+           </section>
+
+
+
+        </main>
+        
+    
+
+    <footer>
+        <h6>© Michaela Fenclová</h6>
+    </footer>
+</body>
+</html>

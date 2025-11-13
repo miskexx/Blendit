@@ -1,3 +1,8 @@
+main {
+width: 90%;
+margin: auto;
+}
+
 .btn-hp{
   font-family: 'MujFont';
       src: url('../fonts/Miskiefont.ttf') format('truetype');
