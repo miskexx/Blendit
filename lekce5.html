@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="./css/">
+    <link rel="stylesheet" href="./css/lekce5.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <script src="./scripts/o-projektu.js" type="module"></script>
+    <script src="./scripts/lekce5.js" type="module"></script>
     <title>BlendIt</title>
 
     <script type="importmap">
@@ -42,9 +42,96 @@
             </ul>
         </header>
 
-        <main>
-                
+        <section class="hero">
+            <div class="nadpis">
+                <h2>  5. LEKCE - BARVA PRO OBJEKTY</h2>
+            </div>
+            <div class="popis">
+                <div id="model-container">
 
+                </div> 
+            </div>
+        </section>
+
+        <main>
+            <section id="sekce" class="uvod">
+                <div class="nadpis-sekce">
+                    <h2> - ÚVOD</h2>
+                </div>
+                <div class="kontent">
+                    <p> Modely bez barev působí často <b>nudně a nepřehledně</b>. 
+                        Proto je dobré už na začátku naučit se, <b>jak objektu přidat barvu</b>. 
+                        V programu <b>Blender</b> se barvy přiřazují pomocí <b>materiálů</b> — každý objekt může mít 
+                        <b>jeden nebo více materiálů</b> a <b>každý materiál</b> může mít svoji vlastní barvu nebo i 
+                        další vlastnosti, jako je lesk či průhlednost. </p>
+                </div>
+           </section>
+
+            <section id="sekce" class="1barva">
+                <div class="nadpis-sekce">
+                    <h2>  - PRVNÍ BARVA</h2>
+                </div>
+                <div class="kontent">
+                    <ol> 
+                        <li><b>Vyber objekt</b> - Klikni <kbd>LMB</kbd> na objekt (např. kostku) a přejdi <kbd>Tab</kbd> do <b>Edit Mode</b></li>
+                        <li><b>Otevři záložku materiálů</b> - Vpravo dole klikni na ikonu <b>Material Properties</b> (červená koule)</li> 
+                        <li><b>Přidej nový materiál</b> - Stiskněte tlačítko <b>+</b> a <b>New</b>.</li> 
+                        <li><b>Zvol barvu</b> - V sekci <b>Surface</b> klikni na pole <b>Base Color</b> a vyber barvu.</li> 
+                        <li><b>Aplikuj barvu</b> - Stiskni tlačítko<b>Assign</b> a přepni zobrazení na <b>Material Preview</b>(ikona koule v horní části 3D okna).</li>
+                    </ol> 
+                    <div class="video">
+                        <video width="600" autoplay loop muted class="video-s-okrajem">
+                            <source src="./videos/prvni-barva.mp4" type="video/mp4">
+                            <source src="./videos/prvni-barva.mp4" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+           </section>
+
+            <section id="sekce" class="vic-objektu">
+                <div class="nadpis-sekce">
+                    <h2> - RŮZNÉ BARVY PRO RŮZNÉ OBJEKTY</h2>
+                </div>
+                <div class="kontent">
+                    <p>Pokud máš ve scéně <b>víc objektů</b>, může každý dostat jiný materiál, a tedy i <b>jinou barvu</b>. Jednoduše vyber jiný objekt a zopakuj výše uvedené kroky.</p>
+                </div>
+           </section>
+
+            <section id="sekce" class="vic-barev">
+                <div class="nadpis-sekce">
+                    <h2> - RŮZNÉ BARVY NA JEDNOM OBJEKTYU</h2>
+                </div>
+                <div class="kontent">
+                    <ol>
+                        <li><b>Výběr plochy</b> - Přepni se do <b>Edit Mode</b> <kbd>Tab</kbd> a <b>vyber plochu nebo plochy</b> <kbd>Shift</kbd> + <kbd>LMB</kbd>, které chceš <b>obarvit</b> jinou barvou.</li>
+                        <li><b>Přidej nový materiál</b> - Stiskněte tlačítko <b>+</b> a <b>New</b>.</li> 
+                        <li><b>Zvol barvu</b> - V sekci <b>Surface</b> klikni na pole <b>Base Color</b> a vyber barvu.</li> 
+                        <li><b>Aplikuj barvu</b> - Stiskni tlačítko<b>Assign</b> a přepni zobrazení na <b>Material Preview</b>.</li>
+                        <li><b>Výsledek</b> - <b>Vybraná plocha</b> získá <b>novou barvu</b>, zatímco <b>zbytek objektu</b> si <b>zachová původní</b>.</li>
+                    </ol>
+                    <div class="video">
+                        <video width="600" autoplay loop muted class="video-s-okrajem">
+                            <source src="./videos/vic-barev.mp4" type="video/mp4">
+                            <source src="./videos/vic-barev.mp4" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+           </section>
+
+           <section id="sekce" class="shrnuti">
+                <div class="nadpis-sekce">
+                    <h2> - SHRNUTÍ LEKCE</h2>
+                </div>
+                <div class="kontent-shrnuti">
+                    <ul>
+                        <li>• Barvy se přiřazují pomocí <b>Materiálů</b> v panelu <b>Material Properties</b>.</li>
+                        <li>• Nový materiál se vytváří tlačítkem <b>New</b> a barva se mění v sekci <b>Base Color</b>.</li>
+                        <li>• Jeden objekt může mít více barev, pokud v <b>Edit Mode</b> přidáš nový <b>Materiálový slot</b> a pomocí <b>Assign</b> barvu přiřadíš vybraným plochám.</li>
+                    </ul>
+                </div>
+           </section>
         </main>
         
     

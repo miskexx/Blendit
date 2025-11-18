@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="./css/">
+    <link rel="stylesheet" href="./css/lekce6.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/nav.css">
-    <script src="./scripts/o-projektu.js" type="module"></script>
+    <script src="./scripts/lekce6.js" type="module"></script>
     <title>BlendIt</title>
 
     <script type="importmap">
@@ -42,7 +42,106 @@
             </ul>
         </header>
 
+        <section class="hero">
+            <div class="nadpis">
+                <h2>6. LEKCE - KAMERA, SVĚTLO, RENDER</h2>
+            </div>
+            <div class="popis">
+                <div id="model-container">
+
+                </div> 
+            </div>
+        </section>
+
         <main>
+            <section id="sekce" class="uvod">
+                <div class="nadpis-sekce">
+                    <h2> - ÚVOD</h2>
+                </div>
+                <div class="kontent">
+                    <p><b>Model</b> máme <b>hotový a obarvený</b>. 
+                        Teď je čas udělat mu pořádnou <b>„fotku“</b> - v Blenderu se tomu říká <b>render</b>. 
+                        K tomu potřebujeme <b>nastavit kameru a světla</b>, aby výsledný obrázek vypadal co nejlépe.</p>
+                </div>
+           </section>
+
+            <section id="sekce" class="kamera">
+                <div class="nadpis-sekce">
+                    <h2> - KAMERA</h2>
+                </div>
+                <div class="kontent">
+                    <p><b>Kamera</b> ve scéně funguje jako “<b>fotoaparát</b>”, ze kterého Blender pořídí výsledný obrázek nebo animaci.
+                        To, co kamera „vidí“, bude přesně to, co se objeví na <b>finálním renderu</b>. 
+                        Kameru ve scéně poznáš tak že má tvar malého <b>obdélníkového rámečku</b> 
+                        s výstupkem - ten ukazuje směr, kam je kamera natočená.</p><br>
+                    <ol>
+                        <li><b>Podívej se skrz kameru:</b> stiskni <kbd>0</kbd> 
+                            (nebo View → Cameras → Active Camera). Tím uvidíš, co bude ve výsledném obrázku.</li>
+
+                        <li><b>Posouvej kameru jako objekt:</b> označ kameru a používej <kbd>G</kbd> a <kbd>R</kbd>.</li>
+
+                        <li>Když si <b>scénu nastavíš</b> tak, jak <b>ji chceš vyfotit</b>, 
+                            stiskni <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>0</kbd>. Kamera se nastaví přesně podle tvého pohledu.</li>
+                    </ol>
+                </div>
+           </section>
+
+            <section id="sekce" class="svetlo">
+                <div class="nadpis-sekce">
+                    <h2> - SVĚTLO</h2>
+                </div>
+                <div class="kontent">
+                    <p><b>Světlo</b> ve scéně funguje podobně jako <b>lampa</b> nebo <b>slunce</b> - 
+                        bez něj by byl obrázek tmavý. Blender automaticky přidá jedno světlo už na začátku, 
+                        takže ho můžeš hned upravovat.</p>
+                    <ol>
+                        <li><b>Přidání světla:</b> <kbd>Shift</kbd> + <kbd>A</kbd> → Light → Point a vlož nové bodové světlo.</li>
+                        <li><b>Přesunutí světla:</b> pomocí <kbd>G</kbd> ho můžeš libovolně posunout ve scéně.</li>
+                        <li><b>Náhled osvětlení:</b>  pro zobrazení, jak světlo dopadá na objekty, použij <kbd>Z</kbd> → Rendered.</li>
+                        <li><b>Nastavení světla:</b> vyber světlo a v Data Properties (zelená žárovka v pravo dole) můžeš změnit jeho typ, barvu i intenzitu.</li>
+                    </ol>
+                </div>
+           </section>
+
+            <section id="sekce" class="render">
+                <div class="nadpis-sekce">
+                    <h2> - RENDER</h2>
+                </div>
+                <div class="kontent">
+                    <p><b>Render</b> je finální obrázek nebo animace, kterou Blender vytvoří z tvé scény. 
+                        Je to něco jako „vyvolání fotky“ - Blender spočítá světla, materiály, stíny i odrazy 
+                        a převede tvou 3D scénu na 2D obrázek. Kvalitu výsledku určuje nastavení renderu.</p>
+                    <ol>
+                        <li><b>Otevření nastavení renderu:</b> vpravo klikni na ikonku fotoaparátu 
+                            (Render Properties). Tady nastavíš kvalitu, styl nebo výpočet.</li>
+
+                        <li><b>Výběr render enginu:</b> můžeš použít <b>Cycles</b> (realistický, ale pomalejší) 
+                            nebo <b>Eevee</b> (rychlý, vhodný pro náhledy a stylizované scény).</li>
+
+                        <li><b>Spuštění renderu:</b> stiskni <kbd>F12</kbd> 
+                            (nebo Render → Render Image). Blender vypočítá finální obrázek.</li>
+
+                        <li><b>Uložení obrázku:</b> v okně renderu klikni na Image → Save As… 
+                            a vyber formát a místo uložení.</li>
+                    </ol>
+
+                </div>
+           </section>
+
+            <section id="sekce" class="shrnuti">
+                <div class="nadpis-sekce">
+                    <h2> - SHRNUTÍ LEKCE</h2>
+                </div>
+                <div class="kontent-shrnuti">
+                    <ul>
+                        <li>• Kamera určuje, co bude vidět na finálním <b>renderu</b>, a dá se ovládat jako každý jiný objekt.</li>
+                        <li>• Světla ovlivňují jas, stíny i atmosféru scény a mění se v panelu <b>Light Data</b>.</li>
+                        <li>• Finální obrázek vytvoříš pomocí <b>F12</b> a kvalitu nastavíš v <b>Render Properties</b>.</li>
+                    </ul>
+                </div>
+           </section>
+
+
                 
 
         </main>
