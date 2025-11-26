@@ -38,7 +38,7 @@ window.addEventListener('resize', onWindowResize);
 let loadedModel;
 const loader = new GLTFLoader();
 loader.load(
-    "/assets/render.glb",
+    "./assets/render.glb",
     (gltf) => {
         loadedModel = gltf.scene;
         scene.add(loadedModel);

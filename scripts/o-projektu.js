@@ -60,7 +60,7 @@ window.addEventListener('resize', onWindowResize);
 let loadedModel;
 const loader = new GLTFLoader();
 loader.load(
-    "/assets/postavicka.glb",
+    "./assets/postavicka.glb",
     (gltf) => {
         loadedModel = gltf.scene;
         loadedModel.traverse((child) => {

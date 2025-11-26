@@ -98,7 +98,7 @@ window.addEventListener('resize', onWindowResize);
 let loadedModel;
 const loader = new GLTFLoader();
 loader.load(
-    "/assets/kytka.glb",
+    "./assets/kytka.glb",
     (gltf) => {
         loadedModel = gltf.scene;
         scene.add(loadedModel);

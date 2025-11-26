@@ -96,7 +96,7 @@ let loadedRocketModel;
 const loader = new GLTFLoader();
 
 loader.load(
-    "/assets/raketa.glb",
+    "./assets/raketa.glb",
     (gltf) => {
         loadedRocketModel = gltf.scene;
         scene.add(loadedRocketModel);
@@ -123,7 +123,7 @@ const starPositions = [
 
 
 loader.load(
-    "/assets/hvezda.glb", 
+    "./assets/hvezda.glb", 
     (gltf) => {
         const starTemplate = gltf.scene;
         

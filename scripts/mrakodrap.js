@@ -64,7 +64,7 @@ window.addEventListener("resize", onWindowResize);
 let loadedModel;
 const loader = new GLTFLoader();
 loader.load(
-    "/assets/mrakodrap.glb",
+    "./assets/mrakodrap.glb",
     (gltf) => {
         loadedModel = gltf.scene;
         loadedModel.traverse((child) => {

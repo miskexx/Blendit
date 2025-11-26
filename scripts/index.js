@@ -1,6 +1,6 @@
-import * as THREE from "three";
+import * as THREE from 'three';
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const container = document.getElementById("model-container");
 
@@ -45,7 +45,7 @@ window.addEventListener('resize', onWindowResize);
 let loadedModel;
 const loader = new GLTFLoader();
 loader.load(
-    "/assets/racoonH.glb",
+    "./assets/racoonH.glb",
     (gltf) => {
         loadedModel = gltf.scene;
         scene.add(loadedModel);
@@ -69,8 +69,8 @@ function animate() {
     requestAnimationFrame(animate);
 
     if (loadedModel) {
-        targetRotationY.y = mouseX * 0.3; 
-        targetRotationX.x = mouseY * -0.3; 
+        targetRotationY.y = mouseX * 0.9; 
+        targetRotationX.x = mouseY * -0.9; 
 
         loadedModel.rotation.y += (targetRotationY.y - loadedModel.rotation.y) * 0.05;
         loadedModel.rotation.x += (targetRotationX.x - loadedModel.rotation.x) * 0.05;

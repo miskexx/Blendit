@@ -38,7 +38,7 @@ window.addEventListener('resize', onWindowResize);
 let loadedModel;
 const loader = new GLTFLoader();
 loader.load(
-    "/assets/lampa.glb",
+    "./assets/lampa.glb",
     (gltf) => {
         loadedModel = gltf.scene;
         scene.add(loadedModel);

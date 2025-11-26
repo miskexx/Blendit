@@ -40,7 +40,7 @@ window.addEventListener('resize', onWindowResize);
 let loadedModel;
 const loader = new GLTFLoader();
 loader.load(
-    "/assets/blender-logo.glb",
+    "./assets/blender-logo.glb",
     (gltf) => {
         loadedModel = gltf.scene;
         scene.add(loadedModel);
