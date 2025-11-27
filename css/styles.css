@@ -121,3 +121,21 @@ kbd {
 .move a:hover {
   color: var(--grey);
 }
+
+.obrazek{
+  transition: transform .2s;
+}
+
+.obrazek:hover {
+    transform: scale(1.03);
+    cursor: zoom-in;
+}
+
+#video{
+  transition: transform 0.2s;
+}
+
+#video:hover {
+    transform: scale(1.03);
+    cursor: zoom-in;
+}
